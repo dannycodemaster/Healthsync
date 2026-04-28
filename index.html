@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HealthSync Nigeria | Digital Healthcare Nervous System</title>
+    <meta name="description" content="Offline-first, high-performance hospital management system tailored for the Nigerian healthcare ecosystem.">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-shell">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <i data-lucide="activity" class="logo-icon"></i>
+                    <span class="logo-text">HealthSync<span>Nigeria</span></span>
+                </div>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <div class="nav-group">
+                    <span class="nav-label">Main Loop</span>
+                    <a href="#" class="nav-item active" data-view="dashboard">
+                        <i data-lucide="layout-grid"></i>
+                        <span>Dashboard</span>
+                    </a>
+                    <a href="#" class="nav-item" data-view="patients">
+                        <i data-lucide="users"></i>
+                        <span>Patient Registry</span>
+                    </a>
+                    <a href="#" class="nav-item" data-view="triage">
+                        <i data-lucide="stethoscope"></i>
+                        <span>Triage Engine</span>
+                        <span class="badge badge-danger">3</span>
+                    </a>
+                    <a href="#" class="nav-item" data-view="consultation">
+                        <i data-lucide="user-cog"></i>
+                        <span>Consultation</span>
+                    </a>
+                </div>
+
+                <div class="nav-group">
+                    <span class="nav-label">HRP & Finance</span>
+                    <a href="#" class="nav-item" data-view="billing">
+                        <i data-lucide="credit-card"></i>
+                        <span>Billing & HMO</span>
+                    </a>
+                    <a href="#" class="nav-item" data-view="pharmacy">
+                        <i data-lucide="pill"></i>
+                        <span>Pharmacy</span>
+                    </a>
+                    <a href="#" class="nav-item" data-view="inventory">
+                        <i data-lucide="package"></i>
+                        <span>Inventory</span>
+                    </a>
+                </div>
+            </nav>
+
+            <div class="sidebar-footer">
+                <div class="user-block">
+                    <img src="https://ui-avatars.com/api/?name=Dr.+Chidi+Okezie&background=0284C7&color=fff&bold=true" alt="User">
+                    <div class="user-info">
+                        <span class="user-name">Dr. Chidi Okezie</span>
+                        <span class="user-role">Chief Medical Officer</span>
+                    </div>
+                    <i data-lucide="log-out" class="logout-icon"></i>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="main-area">
+            <header class="top-header">
+                <div class="header-left">
+                    <div class="search-box">
+                        <i data-lucide="search"></i>
+                        <input type="text" placeholder="Search patient ID or name (HSN-XXXXXX)...">
+                    </div>
+                </div>
+                
+                <div class="header-right">
+                    <div class="sync-status online">
+                        <div class="pulse-dot"></div>
+                        <span>Local Edge Sync Active</span>
+                    </div>
+                    
+                    <button class="icon-btn">
+                        <i data-lucide="bell"></i>
+                        <span class="notif-dot"></span>
+                    </button>
+                    
+                    <button class="btn btn-primary" id="quick-register">
+                        <i data-lucide="plus"></i>
+                        <span>New Registration</span>
+                    </button>
+                </div>
+            </header>
+
+            <div id="content-mount" class="content-mount">
+                <!-- Content injected here -->
+            </div>
+        </main>
+    </div>
+
+    <!-- Modals -->
+    <div id="modal-root"></div>
+
+    <script src="app.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
